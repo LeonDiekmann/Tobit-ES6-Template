@@ -11,13 +11,10 @@ const init = async () => {
 
     console.info('ServerUrl for current environment:', SERVER_URL);
 
-    
-    introInit();
-
+    let intro = new introInit(document.querySelector('.tapp__intro'));
     
     let form = new registerFormInit(document.querySelector('.tapp__content'));
     
-
     // initialise a Modeswitch
     modeSwitchInit();
 
