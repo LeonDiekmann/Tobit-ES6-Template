@@ -7,7 +7,6 @@ export default class formTextChange {
         if (Name.value !== "" && Address.value !== "" && Mail.value !== "" && Mail.value.includes("@")) {
             btn.classList.remove("button--disabled");
             btn.disabled = false;
-            console.log('Button disabled');
         }
         else
         {

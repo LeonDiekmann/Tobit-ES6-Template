@@ -1,8 +1,10 @@
 import formTextChange from './formTextChange.js';
+import formButtonRegister from './formButtonRegister.js';
 
 
 
-let TextChange = new formTextChange();
+let textChange = new formTextChange();
+let buttonRegister = new formButtonRegister();
 export default class Form {
     constructor(element) {
         const htmlText = 
@@ -44,21 +46,24 @@ export default class Form {
         let $formName = document.querySelector('#formName');
         let $formAddress = document.querySelector("#formAddress");
         let $formMail = document.querySelector("#formMail");
-        
+        let $formComment = document.querySelector("#inputComment");
         let $btnAdd = document.querySelector("#btnAdd");
 
         
     
         document.querySelector('#formName').addEventListener("input", () => {
-            TextChange.TextChange($formName,$formAddress,$formMail,$btnAdd);
+            textChange.TextChange($formName,$formAddress,$formMail,$btnAdd);
         });
     
         document.querySelector("#formAddress").addEventListener("input", () => {
-            TextChange.TextChange($formName,$formAddress,$formMail,$btnAdd);
+            textChange.TextChange($formName,$formAddress,$formMail,$btnAdd);
         })
     
         document.querySelector("#formMail").addEventListener("input", () => {
-            TextChange.TextChange($formName,$formAddress,$formMail,$btnAdd);
+            textChange.TextChange($formName,$formAddress,$formMail,$btnAdd);
+        });
+        $btnAdd.addEventListener("click", function() {
+            buttonRegister.ButtonRegister($formName,$formAddress,$formMail,$formComment,$btnAdd)
         });
     }
     
