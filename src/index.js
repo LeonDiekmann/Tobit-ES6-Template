@@ -1,9 +1,8 @@
 /* eslint-disable no-console */
-import modeSwitchInit from './components/modeswitch/modeSwitch';
-import personFinderInit from './components/personFinder/personFinder';
 import SERVER_URL from './constants/server-url';
 import introInit from './components/intro/intro';
 import registerFormInit from './components/registerForm/registerForm';
+import searchInit from './components/searchContainer/searchContainer';
 
 
 const init = async () => {
@@ -15,11 +14,8 @@ const init = async () => {
     
     let form = new registerFormInit(document.querySelector('.tapp__content'));
     
-    // initialise a Modeswitch
-    modeSwitchInit();
+    let search = new searchInit(document.querySelector('.tapp__content'));
 
-    // start Personfinder
-    personFinderInit();
 };
 
 init();
