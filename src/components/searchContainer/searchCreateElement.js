@@ -13,7 +13,6 @@ export default class searchCreateElement {
         var listTitleHead = document.createElement("p");
         var listTitleDesc = document.createElement("p");
 
-
         list.className = "ListItem ListItem--clickable";
         listHead.className = "ListItem__head";
         listDivImg.className = "ListItem__Image";
@@ -29,7 +28,6 @@ export default class searchCreateElement {
         listTitle.appendChild(listTitleHead);
         listTitle.appendChild(listTitleDesc);
         link.appendChild(listLink);
-
 
         listImg.style.backgroundSize = "40px, 40px";
         listImg.style.backgroundImage = "URL('https://chayns.tobit.com/storage/" + element.siteId + "/Images/icon-57.png')";

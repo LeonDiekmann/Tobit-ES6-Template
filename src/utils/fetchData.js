@@ -1,4 +1,4 @@
-import searchCreateElement from './searchCreateElement.js';
+import searchCreateElement from '../components/searchContainer/searchCreateElement.js';
 
 
 let createElement = new searchCreateElement(); 
@@ -6,21 +6,19 @@ export default class searchFetchData {
 
     fetchDataPromise(fetchLink) {
         return new Promise(function(resolve,reject){
-            try
-            {
-                fetch(fetchLink)
-            .then(function(response) {
+            try{
+            fetch(fetchLink)
+            .then((response) => {
                 return response.json()
-            }).then(function(json) {
+            }).then((json) => {
                 resolve(json);
                 console.log('parsed json', json)
-            }).catch(function(ex) {
+            }).catch( (ex) => {
                 console.log('parsing failed', ex)
                 reject(ex);
             })
             }
-            catch (ex)
-            {
+            catch (ex){
                 reject(ex);
             }
         });
