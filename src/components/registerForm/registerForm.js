@@ -43,6 +43,7 @@ export default class Form {
             </div>
         </div>`;
         element.insertAdjacentHTML('beforeend',htmlText);
+        
         let $formName = document.querySelector('#formName');
         let $formAddress = document.querySelector("#formAddress");
         let $formMail = document.querySelector("#formMail");
