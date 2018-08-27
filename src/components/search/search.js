@@ -27,7 +27,7 @@ export default class Search {
                     </div>
                 </div>
                     <div class="Suche Suche--accordion">
-                        <input id="accSearch" type="text" placeholder="Suche" value="Tobit">
+                        <input id="accSearch" type="text" placeholder="Suche" value="">
                         <label>
                             <i class="fa fa-search">
                             </i>
@@ -54,26 +54,29 @@ export default class Search {
         $resultExpand = document.querySelector("#resultExpand");
         
         resultNr = 5;
-        fetchString = $accSearch.value;
+        fetchString = 'Tobit';
         fetchLink = 'https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=' + fetchString + '&Skip=0&Take=' + resultNr;
         fetch.fetchData(fetchLink,$listContainer);
 
         $accSearch.addEventListener("input",() => {
+            resultNr = 5;
             fetchString = $accSearch.value;
             fetchLink = 'https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=' + fetchString + '&Skip=0&Take=' + resultNr;
             if ($accSearch.value !== "") {  
                 clearTimeout(timer);
-                timer = setTimeout(function() {
+                timer = setTimeout(() => {
                     fetch.fetchData(fetchLink,$listContainer);
                 }, 500);
             }
         });
 
 
-        $resultExpand.addEventListener("click", function() {
-            resultNr = resultNr + 5;
-            fetchLink = 'https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=' + fetchString + '&Skip=0&Take=' + resultNr;
-            fetch.fetchData(fetchLink,$listContainer);
+        $resultExpand.addEventListener("click",() => {
+            if ($accSearch.value !== "" || fetchString === 'Tobit' ) {  
+                resultNr = resultNr + 5;
+                fetchLink = 'https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=' + fetchString + '&Skip=0&Take=' + resultNr;
+                fetch.fetchData(fetchLink,$listContainer);
+            }
         });
     };
 };

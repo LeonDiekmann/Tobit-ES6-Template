@@ -62,7 +62,7 @@ export default class Form {
         document.querySelector("#formMail").addEventListener("input", () => {
             textChange.TextChange($formName,$formAddress,$formMail,$btnAdd);
         });
-        $btnAdd.addEventListener("click", function() {
+        $btnAdd.addEventListener("click",() => {
             buttonRegister.ButtonRegister($formName,$formAddress,$formMail,$formComment,$btnAdd)
         });
     }
