@@ -4,6 +4,7 @@ import personFinderInit from './components/personFinder/personFinder';
 import SERVER_URL from './constants/server-url';
 import introInit from './components/intro/intro';
 import registerFormInit from './components/registerForm/registerForm';
+import searchInit from './components/search/search';
 
 
 const init = async () => {
@@ -14,9 +15,9 @@ const init = async () => {
     
     introInit();
 
-    
     let form = new registerFormInit(document.querySelector('.tapp__content'));
     
+    let search = new searchInit(document.querySelector('.tapp__content'));
 
     // initialise a Modeswitch
     modeSwitchInit();
