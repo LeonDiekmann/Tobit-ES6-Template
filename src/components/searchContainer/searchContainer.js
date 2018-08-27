@@ -1,14 +1,7 @@
 import searchFetchData from 'C:/Dev/Projects/Tobit-ES6-Template/src/utils/fetchData.js';
 import searchBar from './search/searchBar.js';
 
-let fetchLink = null;
-let fetchString = null;
-let resultNr = null;
 
-
-let $listContainer = null;
-
-let $resultExpand = null;
 
 
 
@@ -35,6 +28,13 @@ export default class Search {
             </div>
         </div>`;
         element.insertAdjacentHTML('beforeend',htmlText);
+
+        let fetchLink = null;
+        let fetchString = null;
+        let resultNr = null;
+
+        let $listContainer = null;
+        let $resultExpand = null;
 
         $listContainer = document.querySelector('#listContainer');
         $resultExpand = document.querySelector("#resultExpand");

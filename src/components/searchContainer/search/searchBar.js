@@ -8,7 +8,7 @@ export default class searchBar {
         
         const searchHtml = 
             `<div class="Suche Suche--accordion">
-            <input id="accSearch" type="text" placeholder="Suche" value="">
+            <input class="accSearch" type="text" placeholder="Suche" value="">
             <label>
                 <i class="fa fa-search">
                 </i>
@@ -16,7 +16,7 @@ export default class searchBar {
             </div>`;
         location.insertAdjacentHTML('beforeend',searchHtml);
 
-        let $accSearch = location.querySelector('#accSearch');
+        let $accSearch = location.querySelector('.accSearch');
 
 
         this.searchText = defaultText;

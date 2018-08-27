@@ -2,8 +2,6 @@ export default class searchCreateElement {
 
     create(element,link) {
 
-        console.log('creating');
-
         var listLink = document.createElement("a");
         var list = document.createElement("div");
         var listHead = document.createElement("div");
