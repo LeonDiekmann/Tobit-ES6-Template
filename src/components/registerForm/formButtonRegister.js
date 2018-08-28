@@ -1,6 +1,4 @@
-export default class formButtonRegister {
-
-    ButtonRegister(formName,formAddress,formMail,formComment,btnAdd) {
+export default function buttonRegister(formName,formAddress,formMail,formComment,btnAdd) {
         chayns.intercom.sendMessageToPage({ 
             text: "Name: " + formName.value + "\nAdresse: " + formAddress.value + 
             "\nE-Mail: " + formMail.value + "\nKommentar: " + formComment.value
@@ -15,4 +13,3 @@ export default class formButtonRegister {
         });
     }
 
-}

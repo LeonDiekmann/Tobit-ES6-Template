@@ -1,10 +1,10 @@
-import formTextChange from './formTextChange.js';
-import formButtonRegister from './formButtonRegister.js';
+import textChange from './formTextChange.js';
+import buttonRegister from './formButtonRegister.js';
 
 
 
-let textChange = new formTextChange();
-let buttonRegister = new formButtonRegister();
+
+
 export default class Form {
     constructor(element) {
         const htmlText = 
@@ -53,18 +53,18 @@ export default class Form {
         
     
         document.querySelector('#formName').addEventListener("input", () => {
-            textChange.TextChange($formName,$formAddress,$formMail,$btnAdd);
+            textChange($formName,$formAddress,$formMail,$btnAdd);
         });
     
         document.querySelector("#formAddress").addEventListener("input", () => {
-            textChange.TextChange($formName,$formAddress,$formMail,$btnAdd);
+            textChange($formName,$formAddress,$formMail,$btnAdd);
         })
     
         document.querySelector("#formMail").addEventListener("input", () => {
-            textChange.TextChange($formName,$formAddress,$formMail,$btnAdd);
+            textChange($formName,$formAddress,$formMail,$btnAdd);
         });
         $btnAdd.addEventListener("click",() => {
-            buttonRegister.ButtonRegister($formName,$formAddress,$formMail,$formComment,$btnAdd)
+            buttonRegister($formName,$formAddress,$formMail,$formComment,$btnAdd)
         });
     }
     
