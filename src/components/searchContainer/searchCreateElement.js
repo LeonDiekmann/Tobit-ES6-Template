@@ -55,8 +55,4 @@ export default function create(element,link) {
 
     link.insertAdjacentHTML('beforeend',htmlText);
     
-
-
-
-
 }

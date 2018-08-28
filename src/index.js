@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import SERVER_URL from './constants/server-url';
-import introInit from './components/intro/intro';
-import registerFormInit from './components/registerForm/registerForm';
-import searchInit from './components/searchContainer/searchContainer';
+import intro from './components/intro/intro';
+import registerForm from './components/registerForm/registerForm';
+import searchContainer from './components/searchContainer/searchContainer';
 
 
 const init = async () => {
@@ -10,11 +10,11 @@ const init = async () => {
 
     console.info('ServerUrl for current environment:', SERVER_URL);
 
-    let intro = new introInit(document.querySelector('.tapp__intro'));
+    let tappIntro = new intro(document.querySelector('.tapp__intro'));
     
-    let form = new registerFormInit(document.querySelector('.tapp__content'));
+    let form = new registerForm(document.querySelector('.tapp__content'));
     
-    let search = new searchInit(document.querySelector('.tapp__content'));
+    let search = new searchContainer(document.querySelector('.tapp__content'));
 
 };
 
