@@ -34,26 +34,24 @@ export default function create(element,link) {
     // listLink.target = "_blank";
 
     let htmlText = 
-        `
-            <a href="https://chayns.net/${element.siteId}" target ="_blank">
-                <div class="ListItem ListItem--clickable">
-                    <div class="ListItem__head">
-                        <div class="ListItem__Image">
-                            <img style = "background-image: URL('https://chayns.tobit.com/storage/${element.siteId}/Images/icon-57.png'); background-size: 40px, 40px;">
-                            </img>
-                        </div>
-                        <div class="ListItem__Title">
-                            <p class="ListItem__Title--headline">
-                                ${element.appstoreName}
-                            </p>
-                            <p class = "ListItem__Title--description">
+        `<a href="https://chayns.net/${element.siteId}" target ="_blank">
+            <div class="ListItem ListItem--clickable">
+                <div class="ListItem__head">
+                    <div class="ListItem__Image">
+                        <img style = "background-image: URL('https://chayns.tobit.com/storage/${element.siteId}/Images/icon-57.png'); background-size: 40px, 40px;">
+                        </img>
+                    </div>
+                    <div class="ListItem__Title">
+                        <p class="ListItem__Title--headline">
+                            ${element.appstoreName}
+                        </p>
+                        <p class = "ListItem__Title--description">
 
-                            </p>
-                        </div>
+                        </p>
                     </div>
                 </div>
-            </a>
-        `;
+            </div>
+        </a>`;
 
     link.insertAdjacentHTML('beforeend',htmlText);
     

@@ -1,11 +1,8 @@
-import searchFetchData from 'C:/Dev/Projects/Tobit-ES6-Template/src/utils/fetchData.js';
+import fetchData from 'C:/Dev/Projects/Tobit-ES6-Template/src/utils/fetchData.js';
 import searchBar from './search/searchBar.js';
 
 
-
-
-
-let fetch = new searchFetchData();
+let fetch = new fetchData();
 export default class Search {
     constructor(element) {
         

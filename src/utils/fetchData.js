@@ -2,7 +2,7 @@ import create from '../components/searchContainer/searchCreateElement.js';
 
 
 
-export default class searchFetchData {
+export default class fetchData {
 
     fetchDataPromise(fetchLink) {
         return new Promise(function(resolve,reject){

@@ -1,8 +1,3 @@
-import { rejects } from 'assert';
-
-
-
-
 export default class searchBar {
     constructor(location,defaultText){
         
@@ -18,7 +13,6 @@ export default class searchBar {
 
         let $accSearch = location.querySelector('.accSearch');
 
-
         this.searchText = defaultText;
 
         let timer = null;
@@ -29,14 +23,10 @@ export default class searchBar {
                 this.searchText = event.target.value;
                 this.onChange(this.searchText);
             }, 500);
-            
         });
-        
     }
     
-
-    onChange() {
-        
+    onChange() {  
     }
 
 }

@@ -1,10 +1,6 @@
 import textChange from './formTextChange.js';
 import buttonRegister from './formButtonRegister.js';
 
-
-
-
-
 export default class Form {
     constructor(element) {
         const htmlText = 
@@ -51,7 +47,6 @@ export default class Form {
         let $btnAdd = document.querySelector("#btnAdd");
 
         
-    
         document.querySelector('#formName').addEventListener("input", () => {
             textChange($formName,$formAddress,$formMail,$btnAdd);
         });
