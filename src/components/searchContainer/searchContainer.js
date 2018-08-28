@@ -33,8 +33,8 @@ export default class Search {
         let $listContainer = null;
         let $resultExpand = null;
 
-        $listContainer = document.querySelector('#listContainer');
-        $resultExpand = document.querySelector("#resultExpand");
+        $listContainer = element.querySelector('#listContainer');
+        $resultExpand = element.querySelector("#resultExpand");
 
         resultNr = 5;
         fetchString = 'Tobit';
