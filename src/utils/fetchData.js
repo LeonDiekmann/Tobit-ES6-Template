@@ -1,7 +1,7 @@
-import searchCreateElement from '../components/searchContainer/searchCreateElement.js';
+import create from '../components/searchContainer/searchCreateElement.js';
 
 
-let createElement = new searchCreateElement(); 
+
 export default class searchFetchData {
 
     fetchDataPromise(fetchLink) {
@@ -32,7 +32,7 @@ export default class searchFetchData {
             console.log("data", result);
             for (let index = 0; index < result.Data.length; index++) {
                 const element = result.Data[index];
-                createElement.create(element, listContainer);
+                create(element, listContainer);
                 console.log("data", element.siteId);
             }            
         }).catch(function(){
